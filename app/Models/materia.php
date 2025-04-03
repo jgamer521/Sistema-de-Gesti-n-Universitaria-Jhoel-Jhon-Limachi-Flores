@@ -5,18 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Carrera extends Model
+class Materia extends Model
 {
     use HasFactory;
 
-    protected $table = 'carreras';
+    protected $table = 'materias';
 
     protected $fillable = [
+        'carrera_id',
         'nombre',
+        'codigo',
     ];
 
-    public function materia()
-    {
-        return $this->hasMany(Materia::class);
-    }
+    public function carrera()
+{
+    return $this->belongsTo(Carrera::class);
 }
+
+}
+

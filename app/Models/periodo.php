@@ -5,18 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Carrera extends Model
+class Periodo extends Model
 {
     use HasFactory;
 
-    protected $table = 'carreras';
+    protected $table = 'periodos';
 
     protected $fillable = [
         'nombre',
     ];
-
-    public function materia()
-    {
-        return $this->hasMany(Materia::class);
-    }
+    
 }

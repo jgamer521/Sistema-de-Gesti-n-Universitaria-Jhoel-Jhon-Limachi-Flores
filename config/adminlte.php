@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Sistema de Gestión Universitaria',
+    'title' => 'Sistema de gestión universitaria',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -299,13 +299,14 @@ return [
     */
 
     'menu' => [
-        // Navbar items:
+       
         [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
-        // Sidebar items:
+       
+    
         ['header' => 'DATOS DEL SISTEMA'],
 
         [
@@ -314,7 +315,7 @@ return [
             'icon' => 'fas fa-fw fa-cogs',
             'classes' => 'bg-blue text-white',
         ],
-
+        
         [
             'text' => 'Gestiones',
             'url' => 'admin/gestiones',
@@ -337,13 +338,47 @@ return [
         ],
 
         [
+            'text' => 'Turnos',
+            'url'  => 'admin/turnos',
+            'icon' => 'fas fa-fw fa-clock', 
+            'classes' => 'bg-blue text-white',
+        ],
+
+        [
+            'text' => 'Paralelos',
+            'url'  => 'admin/paralelos',
+            'icon' => 'fas fa-fw fa-clone',
+            'classes' => 'bg-blue text-white',
+        ],
+
+        [
+            'text' => 'Periodos',
+            'url'  => 'admin/periodos',
+            'icon' => 'fas fa-fw fa-calendar-alt',
+            'classes' => 'bg-blue text-white',
+        ],
+
+        [
+            'text' => 'Materias',
+            'url'  => 'admin/materias',
+            'icon' => 'fas fa-fw fa-book ',
+            'classes' => 'bg-blue text-white',
+        ],
+
+        [
             'text' => 'profile',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
+    
+
+
         
-        ['header' => 'labels']
+        ['header' => 'labels'],
         
+
+
+
     ],
 
     /*
@@ -477,13 +512,13 @@ return [
                 [
                     'type' => 'js',
                     'asset' => true,
-                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js',
+                    'location' => 'https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js',
                 ],
                 [
                     'type' => 'css',
                     'asset' => true,
-                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css',
-                ]
+                    'location' => 'https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css',
+                ],
             ],
         ],
         'Pace' => [
@@ -500,6 +535,39 @@ return [
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
                 ],
             ],
+        ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | IFrame
+    |--------------------------------------------------------------------------
+    |
+    | Here we change the IFrame mode configuration. Note these changes will
+    | only apply to the view that extends and enable the IFrame mode.
+    |
+    | For detailed instructions you can look the iframe mode section here:
+    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/IFrame-Mode-Configuration
+    |
+    */
+
+    'iframe' => [
+        'default_tab' => [
+            'url' => null,
+            'title' => null,
+        ],
+        'buttons' => [
+            'close' => true,
+            'close_all' => true,
+            'close_all_other' => true,
+            'scroll_left' => true,
+            'scroll_right' => true,
+            'fullscreen' => true,
+        ],
+        'options' => [
+            'loading_screen' => 1000,
+            'auto_show_new_tab' => true,
+            'use_navbar_items' => true,
         ],
     ],
 
