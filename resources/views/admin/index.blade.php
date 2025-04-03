@@ -77,7 +77,7 @@
             <div class="info-box">
               <img src="{{ url('/img/libro.gif') }}" width="70px" alt="">
               <div class="info-box-content">
-                <span class="info-box-text"><b>Matrias registrados</b></span>
+                <span class="info-box-text"><b>Materias registrados</b></span>
                 <span class="info-box-number">{{ $total_materias }} Materias</span>
               </div>
               <!-- /.info-box-content -->
